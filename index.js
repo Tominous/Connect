@@ -85,7 +85,7 @@ var commands = {
      let embed = new Discord.RichEmbed()
      embed.setAuthor("XP Shop","https://cdn2.iconfinder.com/data/icons/actions-states-vol-1-colored/48/JD-13-512.png")
      embed.setTitle("Send the item you want to buy's ID to this channel:")
-     embed.addField(":one: Custom Profile Text Color","Cost: 1000xp")
+     embed.addField(":one: Custom Profile Text Colour","Cost: 1000xp")
      embed.addField(":two: Turt Badge On Profile","Cost: 2500xp")
      embed.addField(":three: MLG Profile Background","Cost: 3500xp")
      embed.addField(":four: Rainbow Profile Background","Cost: 5000xp")
@@ -99,7 +99,7 @@ var commands = {
         if (m.content==="1") {
           collector.stop()
           if (datafile.xp[message.author.id]<1000) return message.channel.send("<:warning:579387552453099561> **Whoops!** You don't have enough money to buy this.")
-          message.channel.send("<:Info:536983515292499968> Please send the hex color including the # to this channel. To cancel, type `cancel`.")
+          message.channel.send("<:Info:536983515292499968> Please send the hex colour including the # to this channel. To cancel, type `cancel`.")
           let collector2 = message.channel.createMessageCollector(filter);
           collector2.on('collect', msg => {
             if (msg.content==="cancel") {
